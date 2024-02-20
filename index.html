@@ -19,47 +19,86 @@
             embedded
             gesture-detector
         >
+            <a-light type="ambient" color="#445451"></a-light>
+            <a-light type="point" intensity="5" position="2 4 4"></a-light>
             <a-assets>
                 <a-asset-item
-                    id="animated-asset"
-                    src="assets/asset_herculean_boat.gltf"
+                    id="asset1"
+                    src="assets/asset_pirate_captain.gltf"
                 ></a-asset-item>
             </a-assets>
 
+            <a-assets>
+              <a-asset-item
+                  id="asset2"
+                  src="assets/asset_pirate_ship.gltf"
+              ></a-asset-item>
+            </a-assets>
+
+            <a-assets>
+              <a-asset-item
+                  id="asset3"
+                  src="assets/asset_treasure.gltf"
+              ></a-asset-item>
+            </a-assets>
+
             <a-marker
-                id="animated-marker"
+                id="marker1"
                 type="pattern"
                 preset="custom"
-                url="assets/marker_herculean_boat.patt"
+                url="assets/marker1.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
             >
-                <!--<a-entity
-                    id="bowser-model"
-                    scale="0.001364017576370597 0.001364017576370597 0.001364017576370597"
+              <a-entity
+                  id="model1"
+                  scale="1.3259639235286613 1.3259639235286613 1.3259639235286613"
+                  animation-mixer="loop: repeat"
+                  gltf-model="#asset1"
+                  class="clickable"
+                  gesture-handler
+              ></a-entity>
+            </a-marker>
+
+            <a-marker
+                id="marker2"
+                type="pattern"
+                preset="custom"
+                url="assets/marker2.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                position="-1.457 0.307 -0.311"
+            >
+              <a-entity
+                  id="model2"
+                  scale="0.003558373890771124 0.003558373890771124 0.003558373890771124"
+                  position="0 1 0"
+                  animation-mixer="loop: repeat"
+                  gltf-model="#asset2"
+                  class="clickable"
+                  gesture-handler
+              ></a-entity>
+            </a-marker>
+
+            <a-marker
+                id="marker3"
+                type="pattern"
+                preset="custom"
+                url="assets/marker3.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    id="model3"
+                    scale="0.015425266328986503 0.015425266328986503 0.015425266328986503"
                     animation-mixer="loop: repeat"
-                    gltf-model="#animated-asset"
+                    gltf-model="#asset3"
                     class="clickable"
                     gesture-handler
-                ></a-entity>-->
-                <!--<a-entity
-                id="bowser-model"
-                scale="0.051106197170330436 0.051106197170330436 0.051106197170330436"
-                animation-mixer="loop: repeat"
-                gltf-model="#animated-asset"
-                class="clickable"
-                gesture-handler
-            ></a-entity>-->
-            <a-entity
-                id="bowser-model"
-                scale="0.2208567588509523 0.2208567588509523 0.2208567588509523"
-                animation-mixer="loop: repeat"
-                gltf-model="#animated-asset"
-                class="clickable"
-                gesture-handler
-            ></a-entity>
+                ></a-entity>
             </a-marker>
 
             <a-entity camera></a-entity>
