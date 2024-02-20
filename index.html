@@ -22,7 +22,7 @@
             <a-assets>
                 <a-asset-item
                     id="animated-asset"
-                    src="assets/asset.gltf"
+                    src="assets/asset_pirate_ship.gltf"
                 ></a-asset-item>
             </a-assets>
 
@@ -30,7 +30,7 @@
                 id="animated-marker"
                 type="pattern"
                 preset="custom"
-                url="assets/marker.patt"
+                url="assets/marker_pirate_ship.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
@@ -44,14 +44,22 @@
                     class="clickable"
                     gesture-handler
                 ></a-entity>-->
-                <a-entity
+                <!--<a-entity
                 id="bowser-model"
                 scale="0.051106197170330436 0.051106197170330436 0.051106197170330436"
                 animation-mixer="loop: repeat"
                 gltf-model="#animated-asset"
                 class="clickable"
                 gesture-handler
-            ></a-entity>
+            ></a-entity>-->
+            <a-entity
+                    id="bowser-model"
+                    scale="0.003558373890771124 0.003558373890771124 0.003558373890771124"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
             </a-marker>
 
             <a-entity camera></a-entity>
